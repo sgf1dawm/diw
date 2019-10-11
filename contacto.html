@@ -5,22 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="./assets/css/contacto.css"/>
-    <title>Document</title>
+    <title>DContacto - Otto Sport</title>
 </head>
 <body>
+    
+        <header>
+                <a href="index.html"><img src="assets/images/ottosportlogo.png" alt="Otto Sport Logo" width="150" height="150"></a>       
+                <h1 id="titulo"> Otto Sport</h1>
+            </header>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="contacto.html">Contacto</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="datos">
+    <p> Otto Sport<br>Calle Isidoro de Sevilla, 80</p>0
+    Tlf: <a href="tel:+34625331725">+34 625 331 735</a>
+
+    </div>
     <form id="formulario">
-        <label>Nombre</label>
-        <input name="Nombre" type="text"><br>
-        <label>Email</label>
-        <input name="Email" type="text"><br>
-        <label>Edad</label>
-        <input name="Edad" type="text"><br>
-        <label>Telefono</label>
-        <input name="Telefono" type="text"><br>
-        <label>Consulta</label>
-        <textarea></textarea><br>
-        <label>Acepto los términos y condiciones</label>
-        <input type="checkbox">
+        <div id="labels">
+                <label>Nombre</label><br>
+                <label>Email</label><br>
+                <label>Edad</label><br>
+                <label>Telefono</label><br>
+                <label>Consulta</label><br>
+        </div>
+        <div id="inputs">
+                <input name="Nombre" type="text" placeholder="Nombre" required><br>       
+                <input name="Email" type="text" placeholder="Email" required><br>              
+                <input name="Edad" type="text" placeholder="Edad" required><br>                
+                <input name="Telefono" type="text" placeholder="Telefono" required><br>
+                <textarea placeholder="Escribe tu mensaje..." required></textarea><br>
+        </div>
+        <div id="terminos">
+                <label>Acepto los términos y condiciones</label>
+                <input type="checkbox" required><br>
+        </div>
+
+        <input type="button" onclick="" value="Enviar" style="margin-left: 40%; margin-top: 3%;">
     </form>
 </body>
 </html>
