@@ -1,0 +1,61 @@
+*{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+h1, h2, h3{
+ background-color: #CED3DC;
+}
+
+header{
+    background-color: white;
+
+}
+
+header nav a{
+    
+    text-decoration: none;
+    
+}
+
+
+nav ul{
+    float: right;
+    height: 20px;
+    width: 30%;
+    margin-right: -10%;
+}
+
+header nav li{
+    list-style: none;
+    display: inline;
+    padding: 2%;
+
+
+}
+
+p{
+    color:#251E38;
+    background-color: azure;
+}
+
+
+footer{
+    background-color: white;
+
+}
+
+form{
+    background-color: #E2D7CE;
+    color:#251E38;
+    width: 40%;
+}
+
+label, input, textarea{
+    width: 20%;
+}
+
+table{
+    background-color:#E2D7CE;
+    color:#251E38;
+}
