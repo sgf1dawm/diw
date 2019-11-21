@@ -1,48 +1,424 @@
 *{
+    margin: 0px;
+    padding: 0 px;
+    font-family: "Roboto", Arial, Tahoma, sans-serif;
+}
+/* Ejemplo navbar */
+body.nocturno{
+        background-color: #111;
+        color:#eee;
+        transition: background 1s linear;
+
+}
+body.nocturno header{
+  background-color: #111;
+  color:#eee;
+  transition: background 1s linear;
+
+}
+body.nocturno div{
+  background-color: #111;
+        color:#eee;
+        transition: background 1s linear;
+
+}
+body.nocturno nav{
+  background-color: #111;
+        color:#eee;
+        transition: background 1s linear;
+
+}
+body.nocturno nav a{
+        color:#eee;
+        transition: color 1s linear;
+
+}
+body.diurno{
+  background-color: #eee;
+  color:#111;
+  transition: background 1s linear;
+
+}
+body.diurno header{
+background-color: #eee;
+color:#111;
+transition: background 1s linear;
+
+}
+body.diurno div{
+background-color: #eee;
+  color:#111;
+  transition: background 1s linear;
+
+}
+body.diurno nav{
+background-color: #eee;
+  color:#111;
+  transition: background 1s linear;
+
+}
+body.diurno nav a{
+  color:#111;
+  transition: color 1s linear;
+
+}
+
+header{
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    height: 70px;  
+    background-color: rgb(223, 223, 223);
+    z-index: 1;
+}
+nav{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+nav ul{
+    float: right;
+    list-style: none;
+    text-align: center;
+    vertical-align: top;
+}
+nav li{
+    list-style-type: none;
+    padding: 0px;
+    display: inline;
+}
+nav li a{
+    color: black;
+    font-size: 1em;
+    text-decoration: none;
+    line-height: 70px;
+    padding: 15px 10px;
+}
+nav li a:hover{
+     color: #5E5D6E;
+}
+
+/*Ejemplo Parallax*/
+.parallax {
+  background-image: url("C:/Users/girado16412/Desktop/Proyecto DIW/assets/images/RX7V3_01_comped.pngAD6C4DC5-7A98-4AF0-AFEE-252434A9DE0FZoom.jpg");
+  height: 600px; 
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.parallax img{
+  
+  background-image:url("C:/Users/girado16412/Desktop/Proyecto DIW/assets/images/wallpaper.jpg");
+  border-radius: 68px;
+  max-width: 400px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+body { padding-top: 70px; }
+
+/* Ejemplo Whatsapp fijo*/
+#btn-fixed {
+	display: block;
+	position: fixed;
+  bottom: 10px;
+	right: 10px;
+}
+
+/*Ejemplo Call to action*/
+
+.call-to-action{
+
+  max-width: 50%;
+  margin: 100px 0 0 100px;
+  padding: 0 30px 0 30px;
+  text-align: center;
+  
+
+}
+aside{
+
+  padding: 5% 0 0 5%;
+  margin:100px 100px 0 0 ;
+  border: solid;
+  border-radius: 5px;
+  height: 200px;
+  line-height: 170%;
+ 
+}
+
+aside a{
+  padding-left: 10%;
+}
+
+#derecha{
+  float: right;
+  width: 25%;
+  margin-top:-25%;
+  margin-right: 7%;
+}
+
+/* mirar cajas posicionamiento automatico */
+
+p.big{
+  font-size: 1.1em;
+  line-height: 1.5em;
+}
+.call-to-action h2, .call-to-action p, .call-to-action button{
+  margin-bottom: 20px;
+}
+button{
+  padding: 15px 40px 15px 40px;
+  background-color: black;
+  font-size: 1em;
+  color: white;
+   -webkit-transition: background 1s linear;
+  transition: background 0.5s linear;
+}
+button:hover{
+  background-color: #4A4959;
+}
+.fa-whatsapp{
+  color: green;
+  font-size: 3em; 
+}
+
+/*Ejemplo con cajas flexibles*/
+.info-box{
+  background-color: #1C1D22;
+  margin: 0px auto;
+  padding: 110px 0 110px 0;
+  color: white;
+  text-align: center;
+}
+.info-box h2{
+  margin-bottom: 30px;
+}
+#flex-p{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+#flex-p p{
+  padding: 30px;
+  max-width: 300px;
+}
+.fa-star, .fa-thumbs-up, .fa-check{
+  font-size: 2.7em;
+  display: block;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/*Ejemplo con floats y porcentajes*/
+.description-box{
+  max-width: 1024px;
+  margin: 0 auto;
+}
+.img-container {
+  margin: 50px 0 50px 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  float: left;
+  width: 50%;
+  padding: 30px;
+}
+.img-container img, img-container p{
+  width: 100%;
+  padding-bottom: 10px;
+}
+.img-container p{
+ text-align: justify;
+}
+footer{
+  padding: 30px 0 30px 0;
+  text-align: center;
+  clear: both;
+  background-color: black;
+}
+.fa-facebook-f, .fa-twitter, .fa-pinterest-p{
+  font-size: 2em;
+  display: inline;
+  padding: 10px;
+  color: white;
+  margin-bottom: 30px;
+}
+/*Ejemplo Media Queries*/
+
+@media screen and (max-width: 700px) {
+   .img-container { 
+        width: 100%;   
+        margin: 0;
+    }
+}
+
+
+/* *{
     margin-left: 0px;
     margin-right: 0px;
 }
 
-h1, h2, h3{
- background-color: #CED3DC;
+body{
+    width: 80%;
+    margin: 0px auto;
+    font-family: 'Roboto', sans-serif;
+    
+    }
+   
+
+
+#logoimg{
+    padding-left: 2%;
+    padding-bottom: 10px;
+    width: 150px;
+    float: left;
+    position: absolute;
+}
+
+
+
+#titulo{
+    width: 30%;
+    float: left;
+    padding: 1%;
+    padding-left: 2.5%;
+    font-family: 'Pacifico', cursive;
+
+}
+
+
+
+h2{
+    width: 15%;
+    margin: 0 auto;
+    text-align: center;
+    border: 8px ridge #4FB286;
+    border-radius: 12px;
+}
+
+h3, h2{
+    font-family: 'Big Shoulders Text', medium;
+    text-transform: uppercase;
+    font-size: 140%;
+    
 }
 
 header{
-    background-color: white;
-
+    padding: 20px;  
+    height: 100px;
+    margin: 10px 20px 10px 20px;
+    top: 0px;
+    position: fixed;
+    width: 80%;
+    z-index: 1;
+    
+    background-color: #d6c724;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
+    box-shadow: 10px 10px 5px 0px rgba(130,130,130,1);
 }
 
-header nav a{
-    
-    text-decoration: none;
-    
-}
 
-
-nav ul{
+nav {
     float: right;
-    height: 20px;
-    width: 30%;
-    margin-right: -10%;
+
+}
+nav ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		padding-right: 20px;
+}
+	
+nav ul li {
+			display: inline-block;
+            line-height: 30px;
+            padding:15px;
+}
+			
+nav ul li a {
+                text-align: center;
+                display: block;	
+                width: 110%;			
+                text-decoration: none;
+                border: 5px solid #69EDB2;
+                border-radius: 6px;
+                background-color: #E6E1C5;
+}
+			
+nav ul li a:hover {
+					background: grey;
+	}
+
+main{
+    margin-top: 5%;
+
+
 }
 
-header nav li{
-    list-style: none;
-    display: inline;
-    padding: 2%;
+section{
+    border: 5px solid #395C6B;
+    background-color:white;
+    border-radius: 3px;
+    width: 70%;
+    padding: 20px;
+    float: left;
+}
+aside{
+    background-image: url("../images/wallpaper.png");
+    float:right;
+    width: 20%;
+    border: 5px solid #395C6B;
+    border-radius: 6px;
+    height: 700px;
 
+}
+aside div{
+    margin: 0 auto;
+    width: 80%;
+    padding-left: 15px;
+}
 
+aside li{
+    margin: 0;
+    padding: 17px;
+    margin-top: -12%;
+	list-style: none;
+	background-image: url("../images/arrow.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-size: 15px;
 }
 
 p{
     color:#251E38;
     background-color: azure;
+    text-indent: 2%;
+    text-align: justify;
+    letter-spacing: 2%;
+    line-height: 150%;
 }
 
+section article h3{
+    text-indent: 2%;
+}
 
 footer{
-    background-color: white;
+    float: left;
+    height: 70px;
+    width: 50%;
+    margin: 2% 0 0 25%;
+}
 
+#iconos, #privacidad{
+    line-height: 150%;
+    text-align: center;
 }
 
 form{
@@ -58,4 +434,4 @@ label, input, textarea{
 table{
     background-color:#E2D7CE;
     color:#251E38;
-}
+} */
