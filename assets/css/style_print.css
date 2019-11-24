@@ -12,6 +12,7 @@ body.nocturno{
 
 }
 body.nocturno header{
+  
   background-color: #111;
   color:#eee;
   -webkit-transition: background 1s linear;
@@ -26,6 +27,7 @@ body.nocturno div{
 
 }
 body.nocturno nav{
+ 
   background-color: #111;
         color:#eee;
         -webkit-transition: background 1s linear;
@@ -35,19 +37,9 @@ body.nocturno nav{
 body.nocturno nav a{
         color:#eee;
         -webkit-transition: color 1s linear;
-        transition: color 0.5s ease;
+        transition: color 1s linear;
 
 }
-body.nocturno nav ul input{
-    background-color: rgb(39, 29, 18);
-    color: #eee;
-}
-body.nocturno nav ul input:hover{
-    background-color: #eee;
-    color: #111;
-    transition: background-color 1s ease;
-}
-
 body.diurno{
   background-color: #eee;
   color:#111;
@@ -56,6 +48,7 @@ body.diurno{
 
 }
 body.diurno header{
+
 background-color: #eee;
 color:#111;
 -webkit-transition: background 1s linear;
@@ -70,6 +63,7 @@ background-color: #eee;
 
 }
 body.diurno nav{
+
 background-color: #eee;
   color:#111;
   -webkit-transition: background 1s linear;
@@ -79,21 +73,12 @@ background-color: #eee;
 body.diurno nav a{
   color:#111;
   -webkit-transition: color 1s linear;
-  transition: color 0.5s ease;
+  transition: color 1s linear;
 
-}
-body.diurno nav ul input{
-    background-color: #eee;
-    color: #111;
-    transition: background-color 1s ease;
-}
-body.diurno nav ul input:hover{
-    background-color: rgb(39, 29, 18);
-    color: #eee;
-    transition: background-color 1s ease;
 }
 
 header{
+    display: none;
     top: 0px;
     position: fixed;
     width: 100%;
@@ -102,6 +87,7 @@ header{
     z-index: 1;
 }
 nav{
+    display: none;
     max-width: 1024px;
     margin: 0 auto;
 }
@@ -124,14 +110,9 @@ nav li a{
     line-height: 70px;
     padding: 15px 10px;
 }
-nav ul input{
-    border-radius: 12px;
-}
 nav li a:hover{
-     color: rgb(0, 38, 255);
-     text-shadow: 0px 0px 5px #F7A956;
+     color: #5E5D6E;
 }
-
 
 /*Ejemplo Parallax*/
 .parallax {
@@ -172,39 +153,32 @@ body { padding-top: 70px; }
 .call-to-action{
 
   max-width: 50%;
-  margin: 100px 0 0 100px;
+  margin: 100px 0 0 150px;
   padding: 0 30px 0 30px;
   text-align: center;
   
 
 }
 aside{
-  position: absolute;
-  padding: 1% 0 0 1%;
-  /* margin: 10% 0 0 0; */
-  width: 45%;
+  display: none;
+  padding: 5% 0 0 5%;
+  margin:100px 100px 0 0 ;
   border: solid;
   border-radius: 5px;
   height: 200px;
-  line-height: 200%;
+  line-height: 170%;
  
 }
 
 aside a{
   padding-left: 10%;
-  text-decoration: none;
-  color: rgb(199, 138, 73);
-  
-  
 }
 
 #derecha{
-  position: absolute;
   float: right;
   width: 25%;
-  margin-top:-12%;
-  margin-left: 70%;
-  /* margin-right: 7%; */
+  margin-top:-25%;
+  margin-right: 7%;
 }
 
 /* mirar cajas posicionamiento automatico */
@@ -286,6 +260,7 @@ button:hover{
  text-align: justify;
 }
 footer{
+  display: none;
   padding: 30px 0 30px 0;
   text-align: center;
   clear: both;
@@ -300,62 +275,16 @@ footer{
 }
 .fa-whatsapp{
   font-size: 2em;
+  /* padding: 10px; */
   margin-left: 50%;
   color: green;
+  /* margin: 0 0 30px 20px; */
 }
 /*Ejemplo Media Queries*/
 
 @media screen and (max-width: 700px) {
-
    .img-container { 
         width: 100%;   
         margin: 0;
     }
-    nav li input{
-      display: none;
-      
-    }
-    nav ul{
-      margin-top: -18%;
-    }
-    aside{
-      display: none;
-    }
-    
-}
-
-@media screen and (min-width: 701px) and (max-width: 1100px){
-   .img-container { 
-        width: 100%;   
-        margin: 0;
-    }
-    aside{
-      display: none;
-    }
-    nav ul{
-      font-size: 1.5em;
-    }
-    nav ul input{
-      font-size: 1em;
-    }
-    .call-to-action{
-      margin: 0 auto;
-      margin-top: 40px;
-    }
-    .fa-facebook-f, .fa-twitter, .fa-pinterest-p, .fa-whatsapp{
-      font-size: 2.5em;
-      margin-left: 10px;
-    }
-}
-
-@media screen and (min-width: 1101px) and (max-width: 1500px){
-  
-  #derecha{
-    position: relative;
-    margin-top: -20%;
-  }
-  /* aside{
-    margin: 40% 0 0 40px;
-    width: 70%;
-  } */
 }
