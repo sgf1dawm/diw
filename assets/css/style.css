@@ -47,6 +47,11 @@ body.nocturno nav ul input:hover{
     color: #111;
     transition: background-color 1s ease;
 }
+body.nocturno aside{
+background: rgb(2,0,36);
+background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(135,44,44,1) 51%, rgba(2,0,36,1) 100%);
+transition: background 1s ease;
+}
 
 body.diurno{
   background-color: #eee;
@@ -73,7 +78,7 @@ body.diurno nav{
 background-color: #eee;
   color:#111;
   -webkit-transition: background 1s linear;
-  transition: background 1s linear;
+  transition: background-color 1s linear;
 
 }
 body.diurno nav a{
@@ -92,7 +97,19 @@ body.diurno nav ul input:hover{
     color: #eee;
     transition: background-color 1s ease;
 }
+body.diurno aside{
+background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(255, 230, 241) 0%, rgba(148,187,233,1) 100%);
+}
 
+img:not([alt]){
+  border: 3px solid red;
+}
+
+a[href$=".pdf"]:after{
+  content:url("https://www.shareicon.net/data/16x16/2016/08/13/808584_document_512x512.png");
+  margin: 0px 0 0 7px;
+}
 header{
     top: 0px;
     position: fixed;
@@ -104,6 +121,7 @@ header{
 nav{
     max-width: 1024px;
     margin: 0 auto;
+    box-shadow: 0 2px 0px #F7A956;
 }
 
 nav ul{
@@ -155,6 +173,12 @@ nav li a:hover{
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   overflow: hidden;
+  transition: 1s linear;
+}
+
+.parallax img:hover{
+  transform: rotate(180deg);
+  
 }
 
 body { padding-top: 70px; }
@@ -181,12 +205,13 @@ body { padding-top: 70px; }
 aside{
   position: absolute;
   padding: 1% 0 0 1%;
-  /* margin: 10% 0 0 0; */
+ 
   width: 45%;
   border: solid;
   border-radius: 5px;
   height: 200px;
   line-height: 200%;
+  
  
 }
 
