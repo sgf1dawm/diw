@@ -49,12 +49,21 @@
 <div class="parallax">
   <img src="./assets/images/avengers-logo.png" alt="logo-parallax">
 </div>
-<div id="izquierda">
+
     <div class="call-to-action">
-      <h2>This is a call to action element</h2>
-      <p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation<p>
-      <button>Call to action</button>
+      <h2>¡Te demostramos lo que podemos hacer!</h2>
+      <p class="big">¿No te fias de nosotros?<br> ¡No te preocupes! Nosotros de ti tampoco, mira las imagenes para que abras los ojos</p>
+      
     </div>
+            <!-- <div class="img-container">
+                <img src="./assets/images/roto.jpg" alt="supra roto">
+                <p class="big">Antes de llegar a nosotros.</p>
+            </div>
+            <div class="img-container">
+                <img src="./assets/images/arreglado.jpg" alt="supra arreglado">
+                <p class="big">Después.</p>
+            </div> -->
+    
     <div id="derecha">
         <aside>
             <h2>Elementos</h2>
@@ -64,24 +73,24 @@
 
     </div>
   <div class="info-box">
-  <h2>This is an info-box</h2>
+  <h2>Servicios</h2>
     <div id="flex-p">  
-      <p class="big"><i class="fas fa-star"></i><br>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci incidunt, laudantium nostrum minus fuga aut dolore fugit cupiditate qui.</p>
-      <p class="big"><i class="fas fa-thumbs-up"></i><br>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-    <p class="big"><i class="fas fa-check"></i><br>Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+      <p class="big"><i class="fas fa-car"></i><br>En este taller arreglamos todo tipo de coches.</p>
+      <p class="big"><i class="fas fa-motorcycle"></i><br>Además, somos especialistas en motocicletas.</p>
+    <p class="big"><i class="fas fa-spray-can"></i><br>No solo hacemos mecanica, ¡conoce nuestra zona de chapa y pintura!.</p>
     </div>
 </div>
  <div class="description-box">
    <div class="img-container">
-    <img src="https://www.eniun.com/wp-content/uploads/factores-clave-para-el-SEO.png">
-     <p class="big">Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula.</p>
+    <img src="./assets/images/multipla.jpg" alt="multipla">
+     <p class="big">El Fiat Multipla es conocido por muchos por el coche mas feo jamás creado.</p>
     </div>
     <div class="img-container">
-    <img src="https://www.eniun.com/wp-content/uploads/contenido-incrustado.png">
-         <p class="big">Donec sed odio dui. Cras mattis consectetur purus sit amet fermentum. Nullam id dolor id nibh ultricies vehicula.</p>
+    <img src="./assets/images/e46.jpg" alt="e46">
+         <p class="big">Este es el M3 e46, un deportivo muy iconico en el mundo del motor.</p>
     </div>
   </div>
-  </div>
+  
   <footer>
     <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"></a><i class="fab fa-facebook-f"></i>
     <a href="www.twitter.com/Otto_Sport"></a><i class="fab fa-twitter"></i>
@@ -97,6 +106,19 @@
         body.className = ModoActual == "diurno" ? modo.value="Cambia al modo dia" : modo.value="Cambia al modo noche";
         body.className = ModoActual == "diurno" ? "nocturno" : "diurno";
     }
+
+    function Arreglar() {
+            var imagen = document.getElementById("supra");
+            var texto = document.getElementById("textoSupra")           
+            if(imagen.className == "roto"){
+                imagen.className = "arreglado"
+                texto.innerText = "Así está el coche arreglado"
+            }
+            else{
+                imagen.className = "roto"
+                texto.innerText = "Así está el coche roto"
+            }
+        }
   </script>
 </body> 
 </html>
