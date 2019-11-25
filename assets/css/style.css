@@ -321,7 +321,7 @@ footer{
   padding: 30px 0 30px 0;
   text-align: center;
   clear: both;
-  background-color: black;
+  background-color: #111;
 }
 .fa-facebook-f, .fa-twitter, .fa-pinterest-p{
   font-size: 2em;
@@ -331,6 +331,7 @@ footer{
   margin-bottom: 30px;
 }
 .fa-whatsapp{
+
   font-size: 2em;
   margin-left: 50%;
   color: green;
@@ -385,3 +386,12 @@ footer{
   }
 
 }
+#privacidad{
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #111;
+    color: #eee;
+}
+

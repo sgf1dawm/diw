@@ -1,0 +1,78 @@
+/* body{
+background: rgb(203,203,203);
+background: linear-gradient(90deg, rgba(203,203,203,1) 0%, rgba(205,35,35,1) 40%, rgba(205,35,35,1) 60%, rgba(203,203,203,1) 100%);
+} */
+
+body.nocturno form, body.nocturno #datos{
+background-color: #111;
+}
+
+body.diurno form, body.diurno #datos{
+  background-color: #eee;
+  
+
+}
+
+#datos{
+        padding: 60px 60px 0 60px;
+        max-width: 400px;
+        background-color: #E7E7E7;
+        margin: 0 auto;
+        line-height: 25px;
+}
+
+#datos a{
+    color: rgb(155, 107, 55);
+    transition: color 1s ease;
+}
+#datos a:hover{
+    color: rgb(3, 12, 250);
+    text-shadow: 1px 0px 3px #0095eb;
+}
+
+
+form{
+  padding: 30px 60px 60px 60px;
+  max-width: 400px;
+  background-color: #E7E7E7;
+  margin: 0 auto;
+}
+
+form input, form textarea{
+  margin-bottom: 15px;
+  font-family: "Roboto", sans-serif;
+  width: 100%;
+  max-width: 100%;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; 
+  border: none; 
+  color: #525c66; 
+  font-size: 1em;
+  resize: horizontal; 
+}
+
+form textarea{
+    height: 100px;
+}
+
+form button {
+    margin: 0 0 0 30%;
+	display: block;
+	background-color: #0095eb;
+	padding: 10px 45px 10px 45px;
+	border: 0;
+	font-size: 1em; 
+	color: 	white;
+    transition: background 1s ease;
+    
+}
+form button:hover{
+	background-color: #ff6e6e;
+}
+#privacidad{
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}

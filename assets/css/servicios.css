@@ -1,0 +1,15 @@
+table{
+    margin: 0 auto;
+    width: 60%;
+    height: 300px;
+    margin-bottom: 70px;
+    /* padding: 0px 0 0 0; */
+    border: 2px solid #be0000;
+}
+table td{
+    border: 1px solid blue;
+    box-sizing: 
+}
+form{
+    margin-top: 5%;
+}
