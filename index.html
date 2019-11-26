@@ -61,11 +61,6 @@
     <p class="big">¿No te fias de nosotros?<br> ¡No te preocupes! Nosotros de ti tampoco, investiga en nuestra página,
       ya veras...</p>
 
-    <aside>
-      <h2>Elementos</h2>
-      <a href="">Una cosa</a><br>
-      <a href="http://www.africau.edu/images/default/sample.pdf">Un PDF</a><br>
-    </aside>
   </div>
 
 
@@ -107,19 +102,6 @@
       var ModoActual = body.className;
       body.className = ModoActual == "diurno" ? modo.value = "Cambia al modo dia" : modo.value = "Cambia al modo noche";
       body.className = ModoActual == "diurno" ? "nocturno" : "diurno";
-    }
-
-    function Arreglar() {
-      var imagen = document.getElementById("supra");
-      var texto = document.getElementById("textoSupra")
-      if (imagen.className == "roto") {
-        imagen.className = "arreglado"
-        texto.innerText = "Así está el coche arreglado"
-      }
-      else {
-        imagen.className = "roto"
-        texto.innerText = "Así está el coche roto"
-      }
     }
   </script>
 </body>

@@ -187,16 +187,6 @@ nav li a:hover{
   
 }
 
-/* Ejemplo Whatsapp fijo*/
-#btn-fixed {
-	display: block;
-	position: static;
-  bottom: 10px;
-	right: 10px;
-}
-
-/*Ejemplo Call to action*/
-
 .introduccion{
 
   max-width: 40%;
@@ -205,27 +195,6 @@ nav li a:hover{
   text-align: center;
 
 }
-
-aside{
-  position: relative;
-  width: 20%;
-  margin: -15% 0 0 110%;
-  padding: 1% 0 0 1%;
-  border: solid;
-  border-radius: 5px;
-  height: 200px;
-  line-height: 200%;
-  text-align: left;
-  
- 
-}
-
-aside a{
-  padding-left: 10%;
-  text-decoration: none;
-  color: rgb(199, 138, 73);
-}
-  
   
 /* mirar cajas posicionamiento automatico */
 
@@ -340,7 +309,7 @@ footer{
   color: green;
   right: 30px;
 }
-/*Ejemplo Media Queries*/
+
 
 @media screen and (max-width: 700px) {
 

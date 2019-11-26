@@ -80,6 +80,10 @@
 
         <input type="button" onclick="" value="Enviar">
     </form>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12511.594464432834!2d-0.5142386760945404!3d38.374466749481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd623722751b1dd5%3A0xf9e2d48d7ad48057!2sOtto%20Sport!5e0!3m2!1ses!2ses!4v1574733916280!5m2!1ses!2ses"
+        id="mapa" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+
     <footer>
         <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"></a><i class="fab fa-facebook-f"></i>
         <a href="www.twitter.com/Otto_Sport"></a><i class="fab fa-twitter"></i>
@@ -97,19 +101,6 @@
             var ModoActual = body.className;
             body.className = ModoActual == "diurno" ? modo.value = "Cambia al modo dia" : modo.value = "Cambia al modo noche";
             body.className = ModoActual == "diurno" ? "nocturno" : "diurno";
-        }
-
-        function Arreglar() {
-            var imagen = document.getElementById("supra");
-            var texto = document.getElementById("textoSupra")
-            if (imagen.className == "roto") {
-                imagen.className = "arreglado"
-                texto.innerText = "Así está el coche arreglado"
-            }
-            else {
-                imagen.className = "roto"
-                texto.innerText = "Así está el coche roto"
-            }
         }
     </script>
 </body>

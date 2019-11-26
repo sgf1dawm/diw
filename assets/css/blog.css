@@ -2,14 +2,18 @@ article{
     padding: 20px;
     margin: 0 0 40px 0;
     height: 300px;
-    width: 50%;
+    width: 100%;
     border: 3px solid rgb(0, 81, 255);
     box-shadow: 2px 2px 4px rgb(253, 3, 3);
     border-radius: 10px;
     overflow: hidden;
+    transition: 1s ease;
 }
+
 section{
-    margin: 100px 0 0 20%;
+    margin: 5% 0 0 15%;
+    float: left;
+    width: 45%;
 }
 article h4{
     padding-bottom: 10px;
@@ -24,3 +28,42 @@ article h4{
 article img{
     padding: 3% 0 0 4%;
 }
+
+aside{
+    display: block;
+    width: 15%;
+    float: right;
+    margin: 5% 15% 0 0;
+    padding: 1% 0 0 1%;
+    border: solid;
+    border-radius: 5px;
+    height: 200px;
+    line-height: 200%;
+    text-align: left;
+    transition: 1s ease;
+}
+
+aside:hover, article:hover{
+    transform: scale(1.2);
+}
+/* aside{
+
+  position: absolute;
+  width: 20%;
+  margin: -15% 0 0 110%;
+  padding: 1% 0 0 1%;
+  border: solid;
+  border-radius: 5px;
+  height: 200px;
+  line-height: 200%;
+  text-align: left;
+  
+ 
+}
+
+aside a{
+  padding-left: 10%;
+  text-decoration: none;
+  color: rgb(199, 138, 73);
+} */
+  
