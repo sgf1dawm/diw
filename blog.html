@@ -9,8 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/blog.css" />
     <link rel="stylesheet" type="text/css" media="print" href="./assets/css/style_print.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/contacto.css" />
     <link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Text|Pacifico|Roboto|&display=swap"
         rel="stylesheet">
     <title>Inicio - Otto Sport</title>
@@ -53,38 +53,46 @@
             </ul>
         </nav>
     </header>
-    <div id="datos">
-        <p> Otto Sport<br>Calle Isidoro de Sevilla, 80</p>
-        <p>Tlf: <a href="tel:+34625331725">+34 625 331 735</a></p>
-
+    <div class="parallax">
+        <img src="./assets/images/avengers-logo.png" alt="logo-parallax">
     </div>
-    <form id="formulario">
+    <aside>
+        <h2>Elementos</h2>
+        <a href="">Una cosa</a><br>
+        <a href="http://www.africau.edu/images/default/sample.pdf">Un PDF</a><br>
+    </aside>
+    <section>
+        <article>
+            <h4>Curabitur lobortis urna et.</h4>
+            <p>Phasellus viverra finibus lectus, eu ornare neque consectetur in. Vestibulum facilisis vestibulum lacus,
+                et facilisis
+                augue convallis non. Morbi tempor et tortor non feugiat. Etiam tempus nibh id elit accumsan.</p>
+            <img src="https://picsum.photos/700/200" alt="una foto">
+        </article>
+        <article>
+            <h4>Praesent purus urna, tincidunt.</h4>
+            <p>Fusce ex mi, efficitur non quam a, tempor gravida ligula. Curabitur gravida, ex eu elementum blandit,
+                massa arcu dapibus
+                dui, sed tempus justo enim semper nisl. Sed nec risus pulvinar.</p>
+            <img src="https://picsum.photos/700/200" alt="otra foto">
+        </article>
+        <article>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12511.594464432834!2d-0.5142386760945404!3d38.374466749481!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd623722751b1dd5%3A0xf9e2d48d7ad48057!2sOtto%20Sport!5e0!3m2!1ses!2ses!4v1574733916280!5m2!1ses!2ses"
+                id="mapa" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+        </article>
+        <article>
+            <iframe id="video" src="https://www.youtube.com/embed/-HMzYsHsn94" frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </article>
 
-        <label>Nombre</label>
-        <input name="Nombre" type="text" placeholder="Nombre" required><br>
-
-        <label>Email</label>
-        <input name="Email" type="text" placeholder="Email" required><br>
-
-        <label>Edad</label>
-        <input name="Edad" type="text" placeholder="Edad" required><br><br>
-
-        <label>Telefono</label>
-        <input name="Telefono" type="text" placeholder="Telefono" required><br>
-
-        <label>Consulta</label>
-        <textarea placeholder="Escribe tu mensaje..." required></textarea><br>
-
-        <label>Acepto los términos y condiciones</label>
-        <input type="checkbox" required><br>
-
-        <input type="button" onclick="" value="Enviar">
-    </form>
+    </section>
     <footer>
-        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"></a><i class="fab fa-facebook-f"></i>
-        <a href="www.twitter.com/Otto_Sport"></a><i class="fab fa-twitter"></i>
-        <a href="www.pinterest.com/Otto_Sport/"></a><i class="fab fa-pinterest-p"></i>
-        <a href="tel:625331735"></a><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"><i class="fab fa-facebook-f"></i></a>
+        <a href="www.twitter.com/Otto_Sport"><i class="fab fa-twitter"></i></a>
+        <a href="www.pinterest.com/Otto_Sport/"><i class="fab fa-pinterest-p"></i></a>
+        <a href="tel:625331735"><i class="fab fa-whatsapp"></i></a>
         <div id="privacidad">
             <small>© Otto Sport 2019</small>
             <a>Política de privacidad y cookies</a>
@@ -113,6 +121,3 @@
         }
     </script>
 </body>
-
-
-</html>

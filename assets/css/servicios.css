@@ -8,8 +8,27 @@ table{
 }
 table td{
     border: 1px solid blue;
-    box-sizing: 
+    box-sizing: content-box;
+    background-color: #bb9768;
+}
+td:hover{
+    background-color: #029980;
+}
+th{
+    background-color: #e48080;
 }
 form{
+    width: 60%;
+    margin: 0 auto;
     margin-top: 5%;
+}
+table{
+    text-align: center;
+    table-layout: auto;
+    width: 100%;
+    caption-side: bottom;
+    border-collapse: collapse;
+}
+table tr:first-child td {
+    background: mediumslateblue;
 }
