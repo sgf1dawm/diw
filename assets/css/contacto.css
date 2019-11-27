@@ -1,6 +1,6 @@
 
 
-body.nocturno form{
+body.nocturno form, body.nocturno #mapa{
     color: rgb(201, 201, 201);;
     background: rgb(30, 37, 71);
 }
@@ -8,7 +8,7 @@ body.nocturno input, body.nocturno textarea{
     background: rgb(201, 201, 201);
 }
 
-body.diurno form{
+body.diurno form, body.diurno #mapa{
   background: radial-gradient(circle, rgb(193, 218, 193) 0%, rgb(226, 226, 226) 100%);
   border: 3px solid rgb(87, 87, 87);
   -webkit-box-shadow: 0px 0px 15px rgb(148, 39, 170);
@@ -47,6 +47,12 @@ body.diurno form{
   margin-top: 10%;
   width: 100%;
   height: 400px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+#mapa:hover{
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2)
 }
 form{
   float: left;

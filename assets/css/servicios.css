@@ -27,6 +27,7 @@ table{
 }
 
 table caption{
+    font-family: Pacifico;
     letter-spacing: 20px;
     text-shadow: 0 0 2px rgb(148, 39, 170);
 }
