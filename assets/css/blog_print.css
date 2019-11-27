@@ -1,0 +1,146 @@
+body.nocturno article{
+    border-color: #eee;
+}
+
+body.nocturno aside a{
+    color: rgb(131, 131, 131);
+}
+           
+body.nocturno aside, body.nocturno article{
+    background: rgb(30, 37, 71);
+}
+
+body.diurno aside, body.diurno article{
+background: radial-gradient(circle, rgb(193, 218, 193) 0%, rgb(226, 226, 226) 100%);
+}
+
+article, #articleVideo{
+        border: 3px solid rgb(87, 87, 87);
+        box-shadow: 0px 0px 15px rgb(148, 39, 170);
+}
+
+header, aside, footer, nav{
+    display: none;
+}
+
+article{
+    
+    padding: 20px;
+    margin: 0 0 40px 0;
+    height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 1s ease;
+}
+
+section{
+    margin: 5% 0 0 15%;
+    float: left;
+    width: 45%;
+}
+article h4{
+    text-align: center;
+    font-size: larger;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+#video{
+    position: relative;
+    width: calc(100% + 2px);
+    height: calc(100%);
+    
+}
+#articleVideo{
+    width: calc(100% + 40px);
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-left: calc(1% - 3px);
+}
+article img{
+    float: left;
+    position: relative;
+    width: 70%;
+    padding: 20px 10% 20px 10%;
+    height: 203px;
+    max-width: 800px;
+}
+
+aside{
+    display: none;
+}
+
+@media (min-width: 601px) and (max-width: 1099px) { 
+
+    section{
+        float: none;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    article img{
+        float: left;
+        position: absolute;
+        width: 80%;
+        padding: 20px 10% 10px 5%;
+        max-width: 400px;
+        height: 180px;
+
+    }
+
+    #articleVideo{
+        margin-left: 3px;
+    }
+
+}
+ 
+@media (max-width: 600px) { 
+
+    section{
+        float: none;
+        width: 70%;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    aside{
+        display: none;
+    }
+    article img{
+        float: left;
+        width: 90%;
+        padding: 20px 0 10px 20px;
+
+    }
+    #articleVideo{
+        margin-left: 3px;
+    }
+
+}
+ 
+/* / Móviles en vertical
+   -------------------------------------------------------------------------  */
+@media (max-width: 480px) { 
+
+
+    article{
+        overflow: scroll;
+    }
+    section{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    #articleVideo{
+        margin-left: 3px;
+    }
+    article img{
+        position: relative;
+        display: block;
+        padding: 20px 0 0 20px;
+        width: 90%;
+        float: left;
+    }
+
+}

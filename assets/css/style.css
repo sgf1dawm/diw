@@ -3,33 +3,35 @@
     padding: 0 px;
     font-family: "Roboto", Arial, Tahoma, sans-serif;
 }
+
 body { 
-  padding-top: 70px; 
+  padding-top: 70px;
 }
-/* Ejemplo navbar */
+
 body.nocturno{
-        background-color: #111;
+        background-color: rgb(63, 63, 63);
         color:#eee;
         -webkit-transition: background 1s linear;
         transition: background 1s linear;
 
 }
+
 body.nocturno header{
-  background-color: #111;
+  background-color: rgb(63, 63, 63);
   color:#eee;
   -webkit-transition: background 1s linear;
   transition: background 1s linear;
 
 }
 body.nocturno div{
-  background-color: #111;
+  background-color: rgb(63, 63, 63);
         color:#eee;
         -webkit-transition: background 1s linear;
         transition: background 1s linear;
 
 }
 body.nocturno nav{
-  background-color: #111;
+  background-color: rgb(63, 63, 63);
         color:#eee;
         -webkit-transition: background 1s linear;
         transition: background 1s linear;
@@ -46,47 +48,61 @@ body.nocturno nav ul input{
     background-color: rgb(39, 29, 18);
     color: #eee;
 }
+
 body.nocturno nav ul input:hover{
     background-color: #eee;
-    color: #111;
+    color: rgb(63, 63, 63);
     transition: background-color 1s ease;
 }
-body.nocturno aside{
-background: rgb(2,0,36);
-background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(135,44,44,1) 51%, rgba(2,0,36,1) 100%);
-transition: background 1s ease;
+
+body.nocturno .parallax img{
+    background: rgb(30, 37, 71);
 }
+
+body.nocturno i, body.nocturno #privacidad{
+  color: #eee;
+}
+
+body.diurno i, body.diurno #privacidad{
+  color: rgb(63, 63, 63);
+}
+
+body.diurno .parallax img{
+background: radial-gradient(circle, rgb(193, 218, 193) 0%, rgb(226, 226, 226) 100%);
+}
+
 
 body.diurno{
   background-color: #eee;
-  color:#111;
+  color:rgb(63, 63, 63);
   -webkit-transition: background 1s linear;
   transition: background 1s linear;
 
 }
+
 body.diurno header{
 background-color: #eee;
-color:#111;
+color:rgb(63, 63, 63);
 -webkit-transition: background 1s linear;
 transition: background 1s linear;
 
 }
 body.diurno div{
 background-color: #eee;
-  color:#111;
+  color:rgb(63, 63, 63);
   -webkit-transition: background 1s linear;
   transition: background 1s linear;
 
 }
 body.diurno nav{
 background-color: #eee;
-  color:#111;
+  color:rgb(63, 63, 63);
   -webkit-transition: background 1s linear;
   transition: background-color 1s linear;
 
 }
 body.diurno nav a, body.diurno .fa-car, body.diurno .fa-motorcycle, body.diurno .fa-spray-can{
-  color:#111;
+  color:rgb(63, 63, 63);
   -webkit-transition: color 1s linear;
   transition: color 0.5s ease;
 
@@ -94,7 +110,7 @@ body.diurno nav a, body.diurno .fa-car, body.diurno .fa-motorcycle, body.diurno 
 
 body.diurno nav ul input{
     background-color: #eee;
-    color: #111;
+    color: rgb(63, 63, 63);
     transition: background-color 1s ease;
 }
 body.diurno nav ul input:hover{
@@ -102,10 +118,7 @@ body.diurno nav ul input:hover{
     color: #eee;
     transition: background-color 1s ease;
 }
-body.diurno aside{
-background: rgb(238,174,202);
-background: radial-gradient(circle, rgba(255, 230, 241) 0%, rgba(148,187,233,1) 100%);
-}
+
 
 img:not([alt]){
   border: 3px solid red;
@@ -124,17 +137,20 @@ header{
     background-color: rgb(223, 223, 223);
     z-index: 1;
 }
+
 nav{
-    max-width: 1024px;
+    max-width: 60%;
     margin: 0 auto;
-    box-shadow: 0 2px 0px #F7A956;
+    box-shadow: 0 2px 0px rgb(148, 39, 170);
 }
 
 nav ul{
-    float: right;
+  position: relative;
+      float: right;
     list-style: none;
     text-align: center;
     vertical-align: top;
+    padding-top: 4%;
 }
 nav li{
     list-style-type: none;
@@ -142,10 +158,8 @@ nav li{
     display: inline;
 }
 nav li a{
-    color: black;
     font-size: 1em;
     text-decoration: none;
-    line-height: 70px;
     padding: 15px 10px;
 }
 nav ul input{
@@ -156,8 +170,6 @@ nav li a:hover{
      text-shadow: 0px 0px 5px #F7A956;
 }
 
-
-/*Ejemplo Parallax*/
 .parallax {
   background-image: url("../images/RX7V3_01_comped.pngAD6C4DC5-7A98-4AF0-AFEE-252434A9DE0FZoom.jpg");
   height: 600px; 
@@ -169,10 +181,8 @@ nav li a:hover{
 }
 
 .parallax img{
-  
-  background-image:url("../images/wallpaper.jpg");
   border-radius: 68px;
-  max-width: 400px;
+  width: calc(25%);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -184,64 +194,39 @@ nav li a:hover{
 
 .parallax img:hover{
   transform: rotate(180deg);
-  
 }
-
-.introduccion{
-
-  max-width: 40%;
-  margin: 100px 0 0 20%;
-  padding: 0 30px 0 30px;
-  text-align: center;
-
-}
-  
-/* mirar cajas posicionamiento automatico */
 
 p.big{
   font-size: 1.1em;
   line-height: 1.5em;
 }
 
-.introduccion h2, .introduccion p, .introduccion button{
+.introduccion h2, .introduccion p{
   margin-bottom: 20px;
 }
 
-button{
-  padding: 15px 40px 15px 40px;
-  background-color: black;
-  font-size: 1em;
-  color: white;
-   -webkit-transition: background 1s linear;
-  -webkit-transition: background 0.5s linear;
-  transition: background 0.5s linear;
-  transition: 1s linear;
+.introduccion{
+
+  max-width: 40%;
+  margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+
 }
 
-button:hover{
-  transform: scale(1.5);
-  background-color: #F7A956;
-  color: #111;
-}
-
-.fa-whatsapp{
-  color: green;
-  font-size: 3em; 
-}
-
-/*Ejemplo con cajas flexibles*/
-.info-box{
+.servicios{
   background-color: #1C1D22;
   margin: 0px auto;
   padding: 110px 0 110px 0;
   color: white;
   text-align: center;
 }
-.info-box h2{
+
+.servicios h2{
   margin-bottom: 30px;
 }
 
-#flex-p{
+#flex-servicios{
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -251,10 +236,12 @@ button:hover{
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-#flex-p p{
+
+#flex-servicios p{
   padding: 30px;
   max-width: 300px;
 }
+
 .fa-car, .fa-motorcycle, .fa-spray-can{
   font-size: 2.7em;
   display: block;
@@ -262,37 +249,36 @@ button:hover{
 }
 
 /*Ejemplo con floats y porcentajes*/
-.description-box{
+.CochesCaja{
   max-width: 1024px;
   margin: 0 auto;
 }
+
 .img-container {
-  margin: 50px 0 50px 0;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   float: left;
   width: 50%;
   padding: 30px;
 }
+
 .img-container img{
-  width: 450px;
+  margin: 0 auto;
+  width: 100%;
   height: 300px;
   padding-bottom: 10px;
   transition: 1s ease;
 }
+
 .img-container img:hover{
   transform: scale(1.5) ;
 }
+
 .img-container p{
  text-align: justify;
  overflow: hidden;
 }
-footer{
-  padding: 30px 0 30px 0;
-  text-align: center;
-  clear: both;
-  background-color: #111;
-}
+
 .fa-facebook-f, .fa-twitter, .fa-pinterest-p{
   font-size: 2em;
   display: inline-block;
@@ -300,6 +286,7 @@ footer{
   color: white;
   margin-bottom: 30px;
 }
+
 .fa-whatsapp{
   width: 10vh;
   display: block;
@@ -310,80 +297,85 @@ footer{
   right: 30px;
 }
 
-
-@media screen and (max-width: 700px) {
-
-   .img-container { 
-        width: 100%;   
-        margin: 0;
-    }
-    nav li input{
-      display: none;     
-    }
-    aside{
-      display: none;
-    }
-    
+footer{
+  padding: 30px 0 30px 0;
+  text-align: center;
+  clear: both;
 }
 
-@media screen and (min-width: 701px) and (max-width: 1300px){
-   .img-container { 
-        width: 100%;   
-        
-        margin: 20px 0 20px 20%;
-    }
-    aside{
-      display: none;
-    }
-    nav{
-      height: 70px;
-    }
-    nav ul{
-      font-size: 1em;
-    }
-    nav ul input{
-      font-size: 0.9em;
-    }
-    .introduccion{
-      margin: 0 auto;
-      margin-top: 40px;
-    }
-    .fa-facebook-f, .fa-twitter, .fa-pinterest-p, .fa-whatsapp{
-      font-size: 2.5em;
-      margin-left: 10px;
-    }
-}
-
-@media screen and (min-width: 2500px){
-  *{
-    font-size: 1.1em;
-  }
-  nav{
-    max-width: calc(100% - 700px);
-    margin: 0 auto;
-    box-shadow: 0 2px 0px #F7A956;
-}
-}
-@media screen and (min-width: 3500px){
-  aside{
-    position: relative;
-    width: 20%;
-    margin: -10% 0 0 110%;
-    padding: 1% 0 0 1%;
-    border: solid;
-    border-radius: 5px;
-    height: 200px;
-    line-height: 200%;
-    text-align: left;
-
-  }
-}
 #privacidad{
     display: inline-block;
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background-color: #111;
-    color: #eee;
 }
 
+
+@media (min-width: 1800px){
+  nav ul{
+    margin-top: -20px;
+  }
+}
+
+@media (min-width: 748px) and (max-width: 1199px) { 
+
+nav img{
+  display: none;
+}
+nav ul{
+  width: 100%;
+  margin: auto;
+}
+
+}
+ 
+
+@media (max-width: 747px) { 
+nav img{
+  display: none;
+}
+nav ul{
+  width: 100%;
+  margin: auto;
+}
+#modo{
+  display: none;
+}
+.img-container{
+  width: 80%;
+  display: block;
+  position: relative;
+  margin: 0 10% 0 10%;
+  
+
+}
+
+.img-container p{
+  text-align: center;
+}
+
+}
+
+@media (max-width: 480px) { 
+#modo{
+  display: none;
+}
+.parallax img{
+  width: 40%;
+}
+nav ul{
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  padding-top: 10%;
+}
+nav img{
+  display: none;
+}
+.img-container{
+  width: 100%;
+  margin: 0 auto;
+}
+
+}

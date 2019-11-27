@@ -1,10 +1,30 @@
+body.nocturno article{
+    border-color: #eee;
+}
+
+body.nocturno aside a{
+    color: rgb(131, 131, 131);
+}
+           
+body.nocturno aside, body.nocturno article{
+    background: rgb(30, 37, 71);
+}
+
+body.diurno aside, body.diurno article{
+background: radial-gradient(circle, rgb(193, 218, 193) 0%, rgb(226, 226, 226) 100%);
+}
+
+article, aside, #articleVideo{
+        border: 3px solid rgb(87, 87, 87);
+        box-shadow: 0px 0px 15px rgb(148, 39, 170);
+}
+
 article{
+    
     padding: 20px;
     margin: 0 0 40px 0;
     height: 300px;
     width: 100%;
-    border: 3px solid rgb(0, 81, 255);
-    box-shadow: 2px 2px 4px rgb(253, 3, 3);
     border-radius: 10px;
     overflow: hidden;
     transition: 1s ease;
@@ -16,17 +36,32 @@ section{
     width: 45%;
 }
 article h4{
+    text-align: center;
+    font-size: larger;
     padding-bottom: 10px;
     text-transform: uppercase;
 }
-#mapa, #video{
+#video{
     position: relative;
-    padding-left: 10%;
-    width: 80%;
-    height: 300px;
+    width: calc(100% + 2px);
+    height: calc(100%);
+    
+}
+#articleVideo{
+    width: calc(100% + 40px);
+    padding: 0px;
+    border: none;
+    border-radius: 0px;
+    box-sizing: border-box;
+    margin-left: calc(1% - 3px);
 }
 article img{
-    padding: 3% 0 0 4%;
+    float: left;
+    position: relative;
+    width: 70%;
+    padding: 20px 10% 20px 10%;
+    height: 203px;
+    max-width: 800px;
 }
 
 aside{
@@ -37,33 +72,106 @@ aside{
     padding: 1% 0 0 1%;
     border: solid;
     border-radius: 5px;
-    height: 200px;
-    line-height: 200%;
+    height: calc(100%);
+    line-height: 250%;
     text-align: left;
     transition: 1s ease;
+}
+aside a{
+    text-decoration: none;
+    color: rgb(68, 68, 68);
 }
 
 aside:hover, article:hover{
     transform: scale(1.2);
 }
-/* aside{
 
-  position: absolute;
-  width: 20%;
-  margin: -15% 0 0 110%;
-  padding: 1% 0 0 1%;
-  border: solid;
-  border-radius: 5px;
-  height: 200px;
-  line-height: 200%;
-  text-align: left;
-  
+/* ESTILOS NORMALES (para escritorios muy grandes)
+   ========================================================================= /
  
+body { ... }
+p    { ... }
+ 
+/ RESPONSIVE
+   ========================================================================= /
+ 
+/ Tablets en horizonal y escritorios normales
+   ------------------------------------------------------------------------- / */
+@media (min-width: 601px) and (max-width: 1099px) { 
+
+section{
+    float: none;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+article img{
+    float: left;
+    position: absolute;
+    width: 80%;
+    padding: 20px 10% 10px 5%;
+    max-width: 400px;
+    height: 180px;
+
+}
+aside{
+    display: none;
+}
+#articleVideo{
+    margin-left: 3px;
 }
 
-aside a{
-  padding-left: 10%;
-  text-decoration: none;
-  color: rgb(199, 138, 73);
-} */
-  
+}
+ 
+/* / Móviles en horizontal o tablets en vertical
+   ------------------------------------------------------------------------- / */
+@media (max-width: 600px) { 
+
+
+section{
+    float: none;
+    width: 70%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
+aside{
+    display: none;
+}
+article img{
+    float: left;
+    width: 90%;
+    padding: 20px 0 10px 20px;
+
+}
+#articleVideo{
+    margin-left: 3px;
+}
+
+}
+ 
+/* / Móviles en vertical
+   -------------------------------------------------------------------------  */
+@media (max-width: 480px) { 
+
+
+article{
+    overflow: scroll;
+}
+section{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+#articleVideo{
+    margin-left: 3px;
+}
+article img{
+    position: relative;
+    display: block;
+    padding: 20px 0 0 20px;
+    width: 90%;
+    float: left;
+}
+
+}

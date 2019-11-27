@@ -12,6 +12,9 @@ body.nocturno table tr:nth-child(even) td{
      color: rgb(233, 233, 233);
 }
 
+header, aside, footer, nav{
+    display: none;
+}
 
 table{
     margin: 0 auto;
