@@ -77,26 +77,19 @@ aside{
     text-align: left;
     transition: 1s ease;
 }
-aside a{
+aside a:link{
     text-decoration: none;
     color: rgb(68, 68, 68);
+}
+aside a:visited{
+    text-shadow: 0px 0px 2px red;
 }
 
 aside:hover, article:hover{
     transform: scale(1.2);
 }
 
-/* ESTILOS NORMALES (para escritorios muy grandes)
-   ========================================================================= /
- 
-body { ... }
-p    { ... }
- 
-/ RESPONSIVE
-   ========================================================================= /
- 
-/ Tablets en horizonal y escritorios normales
-   ------------------------------------------------------------------------- / */
+
 @media (min-width: 601px) and (max-width: 1099px) { 
 
 section{
@@ -123,8 +116,6 @@ aside{
 
 }
  
-/* / Móviles en horizontal o tablets en vertical
-   ------------------------------------------------------------------------- / */
 @media (max-width: 600px) { 
 
 
@@ -150,9 +141,7 @@ article img{
 }
 
 }
- 
-/* / Móviles en vertical
-   -------------------------------------------------------------------------  */
+
 @media (max-width: 480px) { 
 
 

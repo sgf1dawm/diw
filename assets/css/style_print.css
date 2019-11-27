@@ -175,7 +175,7 @@ nav li a:hover{
 }
 
 .parallax {
-  background-image: url("../images/RX7V3_01_comped.pngAD6C4DC5-7A98-4AF0-AFEE-252434A9DE0FZoom.jpg");
+  background-image: url("../images/rx7.jpg");
   height: 600px; 
   background-attachment: fixed;
   background-position: center;
@@ -252,7 +252,6 @@ p.big{
   margin-bottom: 30px;
 }
 
-/*Ejemplo con floats y porcentajes*/
 .CochesCaja{
   max-width: 1024px;
   margin: 0 auto;
