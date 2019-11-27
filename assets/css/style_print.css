@@ -3,12 +3,16 @@
     padding: 0 px;
     font-family: "Roboto", Arial, Tahoma, sans-serif;
 }
+a:active{
+  color: yellow;
+}
+
 
 body { 
   padding-top: 70px;
 }
 
-body.nocturno{
+body.nocturno, body.nocturno div, body.nocturno nav, body.nocturno header, body.nocturno nav ul input, body.diurno nav ul input:hover{
         background-color: rgb(63, 63, 63);
         color:#eee;
         -webkit-transition: background 1s linear;
@@ -16,27 +20,6 @@ body.nocturno{
 
 }
 
-body.nocturno header{
-  background-color: rgb(63, 63, 63);
-  color:#eee;
-  -webkit-transition: background 1s linear;
-  transition: background 1s linear;
-
-}
-body.nocturno div{
-  background-color: rgb(63, 63, 63);
-        color:#eee;
-        -webkit-transition: background 1s linear;
-        transition: background 1s linear;
-
-}
-body.nocturno nav{
-  background-color: rgb(63, 63, 63);
-        color:#eee;
-        -webkit-transition: background 1s linear;
-        transition: background 1s linear;
-
-}
 body.nocturno nav a, body.nocturno .fa-car, body.nocturno .fa-motorcycle, body.nocturno .fa-spray-can{
         color:#eee;
         -webkit-transition: color 1s linear;
@@ -44,15 +27,19 @@ body.nocturno nav a, body.nocturno .fa-car, body.nocturno .fa-motorcycle, body.n
 
 }
 
-body.nocturno nav ul input{
-    background-color: rgb(39, 29, 18);
-    color: #eee;
+body.diurno, body.diurno header, body.diurno div, body.diurno nav, body.nocturno nav ul input:hover, body.diurno nav ul input{
+  background-color: #eee;
+  color:rgb(63, 63, 63);
+  -webkit-transition: background 1s linear;
+  transition: background 1s linear;
+  
 }
 
-body.nocturno nav ul input:hover{
-    background-color: #eee;
-    color: rgb(63, 63, 63);
-    transition: background-color 1s ease;
+body.diurno nav a, body.diurno .fa-car, body.diurno .fa-motorcycle, body.diurno .fa-spray-can{
+  color:rgb(63, 63, 63);
+  -webkit-transition: color 1s linear;
+  transition: color 0.5s ease;
+  
 }
 
 body.nocturno .parallax img{
@@ -69,54 +56,6 @@ body.diurno i, body.diurno #privacidad{
 
 body.diurno .parallax img{
 background: radial-gradient(circle, rgb(193, 218, 193) 0%, rgb(226, 226, 226) 100%);
-}
-
-
-body.diurno{
-  background-color: #eee;
-  color:rgb(63, 63, 63);
-  -webkit-transition: background 1s linear;
-  transition: background 1s linear;
-
-}
-
-body.diurno header{
-background-color: #eee;
-color:rgb(63, 63, 63);
--webkit-transition: background 1s linear;
-transition: background 1s linear;
-
-}
-body.diurno div{
-background-color: #eee;
-  color:rgb(63, 63, 63);
-  -webkit-transition: background 1s linear;
-  transition: background 1s linear;
-
-}
-body.diurno nav{
-background-color: #eee;
-  color:rgb(63, 63, 63);
-  -webkit-transition: background 1s linear;
-  transition: background-color 1s linear;
-
-}
-body.diurno nav a, body.diurno .fa-car, body.diurno .fa-motorcycle, body.diurno .fa-spray-can{
-  color:rgb(63, 63, 63);
-  -webkit-transition: color 1s linear;
-  transition: color 0.5s ease;
-
-}
-
-body.diurno nav ul input{
-    background-color: #eee;
-    color: rgb(63, 63, 63);
-    transition: background-color 1s ease;
-}
-body.diurno nav ul input:hover{
-    background-color: rgb(39, 29, 18);
-    color: #eee;
-    transition: background-color 1s ease;
 }
 
 header, aside, footer, nav{
