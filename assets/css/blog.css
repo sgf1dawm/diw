@@ -108,7 +108,10 @@ article img{
 
 }
 aside{
-    display: none;
+    float:none;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
 }
 #articleVideo{
     margin-left: 3px;
@@ -128,7 +131,10 @@ section{
 
 
 aside{
-    display: none;
+    float:none;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
 }
 article img{
     float: left;
@@ -144,7 +150,12 @@ article img{
 
 @media (max-width: 480px) { 
 
-
+aside{
+    float:none;
+    margin: 0 auto;
+    width: 50%;
+    text-align: center;
+}
 article{
     overflow: scroll;
 }

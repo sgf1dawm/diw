@@ -60,3 +60,10 @@ table tr:nth-child(odd) td{
 table tr:nth-child(even) td{
     background-color: rgb(230, 205, 215);
 }
+
+@media (max-width: 560px){
+
+    table{
+        font-size: 0.8em;
+    }
+}
