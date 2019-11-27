@@ -62,8 +62,10 @@ table tr:nth-child(even) td{
 }
 
 @media (max-width: 560px){
-
-    table{
+ form{
+    width: 100%;
+}
+table{
         font-size: 0.8em;
-    }
+}
 }
