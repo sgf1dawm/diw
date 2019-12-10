@@ -70,17 +70,26 @@
                 dui, sed tempus justo enim semper nisl. Sed nec risus pulvinar.</p>
             <img src="https://picsum.photos/400/200" alt="otra foto">
         </article>
-        <article id="articleVideo">
-            <iframe id="video" src="https://www.youtube.com/embed/-HMzYsHsn94"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen></iframe>
-        </article>
+        <!-- <article id="articleVideo"> -->
+        <iframe id="video" src="https://www.youtube.com/embed/-HMzYsHsn94"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <!-- </article> -->
         <article>
             <video id="videosConverted" preload controls loop>
                 <source src="./assets/video/Tunnel - 26475-converted.ogg" type="video/ogg">
                 <source src="./assets/video/Tunnel - 26475-converted.mp4" type="video/mp4">
                 <source src="./assets/video/Tunnel - 26475-converted.webm" type="video/webm">
             </video>
+            <nav class="controles">
+                <input type="button" id="reiniciar" value="reiniciar">
+                <input type="button" id="retrasar" value="&laquo;">
+                <input type="button" id="boton" value="&#9658;">
+                <input type="button" id="adelantar" value="&raquo;">
+                <input type="button" id="silenciar" value="silenciar">
+                <label>Volumen</label>
+                <input type="button" id="menosVolumen" value="-">
+                <input type="button" id="masVolumen" value="+">
+            </nav>
         </article>
         <article>
             <h4>Sonidos</h4>
@@ -89,6 +98,11 @@
                 <source src="./assets/sonidos/Tecno rithmtechno.ogg" type="audio/ogg">
 
             </audio>
+        </article>
+        <article>
+            <canvas id="lienzo" width="450" height="300">
+                El navegador no soporta canvas
+            </canvas>
         </article>
 
 
@@ -107,15 +121,16 @@
 
 
     <footer>
-        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.twitter.com/Otto_Sport"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.pinterest.com/Otto_Sport/"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"><i
+                class="fab fa-facebook-f animacionRRSS"></i></a>
+        <a href="https://www.twitter.com/Otto_Sport"><i class="fab fa-twitter animacionRRSS"></i></a>
+        <a href="https://www.pinterest.com/Otto_Sport/"><i class="fab fa-pinterest-p animacionRRSS"></i></a>
         <a href="tel:625331735"><i class="fab fa-whatsapp"></i></a>
         <div id="privacidad">
             <small>© Otto Sport 2019</small>
             <a href="#">Política de privacidad y cookies</a><br>
 
-            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img class="animacionLogo"
                     alt="Licencia de Creative Commons" style="border-width:0"
                     src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está
             bajo
@@ -125,6 +140,59 @@
     </footer>
 
     <script>
+        function iniciar() {
+            var boton = document.getElementById('boton');
+            boton.addEventListener('click', presionar, false);
+
+            canvas = document.getElementById('lienzo');
+            ctx = canvas.getContext('2d');
+
+            ctx.beginPath();
+            ctx.arc(90, 156, 50, 0, (Math.PI / 180) * 360);
+            ctx.lineWith = 10;
+            ctx.fillStyle = "#171738";
+            ctx.fill();
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+
+
+            ctx.beginPath();
+
+            ctx.moveTo(50, 215);
+            ctx.lineTo(400, 150);
+
+            ctx.lineWidth = 1;
+            ctx.strokeStyle = "#CC0000";
+
+            ctx.stroke();
+
+
+            ctx.fillStyle = "rgba(100, 100, 100, 100)";
+            ctx.fillRect(228, 182, 5, 30);
+
+
+            ctx.beginPath();
+            ctx.arc(380, 132, 20, 0, (Math.PI / 180) * 360);
+            ctx.lineWith = 10;
+            ctx.fillStyle = "#4242A3";
+            ctx.fill();
+            ctx.strokeStyle = "blue";
+            ctx.stroke();
+        }
+
+        function presionar() {
+            if (!medio.paused && !medio.ended) {
+                medio.pause();
+                reproducir.value = 'Reproducir';
+            }
+            else {
+                medio.play();
+                reproducir.value = 'Pausa';
+            }
+        }
+
+        window.addEventListener('load', iniciar, false);
+
         function CambiaModo() {
             var body = document.getElementById("body");
             var ModoActual = body.className;
