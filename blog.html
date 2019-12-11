@@ -75,7 +75,7 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- </article> -->
         <article>
-            <video id="medio">
+            <video id="medio" controls>
                 <source src="./assets/video/Tunnel - 26475-converted.ogg" type="video/ogg">
                 <source src="./assets/video/Tunnel - 26475-converted.mp4" type="video/mp4">
                 <source src="./assets/video/Tunnel - 26475-converted.webm" type="video/webm">
@@ -89,6 +89,7 @@
                 <label>Volumen</label>
                 <input type="button" id="menosVolumen" value="-">
                 <input type="button" id="masVolumen" value="+">
+                <p id="tiempo"></p>
             </nav>
         </article>
         <article>
@@ -223,18 +224,38 @@
         function accionRetrasar() {
             //Usar propiedad .curentTime
             //Contemplar que no existen valores negativos
+            if (medio.currentTime > 3) {
+                medio.currentTime -= 3;
+            }
+            else {
+                medio.currentTime = 0;
+            }
+
         }
         function accionAdelantar() {
             //Contemplar que no existen valores mayores a medio.duration	
+            if (medio.currentTime <= (medio.duration - 3)) {
+                medio.currentTime += 3;
+            }
+            else {
+                medio.currentTime = medio.duration;
+            }
         }
         function accionSilenciar() {
             //Utilizar medio.muted = true; o medio.muted = false;
+            !medio.muted ? medio.muted = true : medio.muted = false;
         }
         function accionMasVolumen() {
             //Contemplar que el valor máximo de volumen es 1
+            if (medio.volume <= 0.8) {
+                medio.volume += 0.2;
+            }
         }
         function accionMenosVolumen() {
             //Contemplar que el valor mínimo de volumen es 0
+            if (medio.volume >= 0.2) {
+                medio.volume -= 0.2;
+            }
         }
 
 
