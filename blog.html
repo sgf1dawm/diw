@@ -75,11 +75,14 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- </article> -->
         <article>
-            <video id="medio" controls>
+            <video id="videoConverted" controls>
                 <source src="./assets/video/Tunnel - 26475-converted.ogg" type="video/ogg">
                 <source src="./assets/video/Tunnel - 26475-converted.mp4" type="video/mp4">
                 <source src="./assets/video/Tunnel - 26475-converted.webm" type="video/webm">
             </video>
+        </article>
+        <article>
+            <video id="medio" src="./assets/video/big_buck_bunny.mp4"></video>
             <nav class="controles">
                 <input type="button" id="reiniciar" value="reiniciar">
                 <input type="button" id="retrasar" value="&laquo;">
@@ -89,7 +92,6 @@
                 <label>Volumen</label>
                 <input type="button" id="menosVolumen" value="-">
                 <input type="button" id="masVolumen" value="+">
-                <p id="tiempo"></p>
             </nav>
         </article>
         <article>
@@ -101,8 +103,20 @@
             </audio>
         </article>
         <article>
-            <canvas id="lienzo" width="450" height="300">
-                El navegador no soporta canvas
+            <h4>Control de Audio</h4>
+            <button id="btn1">Iniciar sonido 1</button>
+            <button id="btn2">Iniciar sonido 2</button>
+            <button id="btn3">Iniciar sonido 3</button>
+            <button id="btn4">Iniciar sonido 4</button>
+        </article>
+        <article>
+            <canvas id="lienzo1" width="450" height="300">
+                El navegador no soporta arte
+            </canvas>
+        </article>
+        <article>
+            <canvas id="lienzo2" width="450" height="300">
+                El navegador no soporta un juegazo
             </canvas>
         </article>
 
@@ -139,7 +153,7 @@
                 Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>.
         </div>
     </footer>
-
+    <!-- pausar sonido y juego -->
     <script>
         function iniciar() {
 
@@ -158,11 +172,9 @@
             menosVolumen.addEventListener('click', accionMenosVolumen);
             masVolumen.addEventListener('click', accionMasVolumen);
 
-
             var boton = document.getElementById('boton');
-            boton.addEventListener('click', presionar, false);
 
-            canvas = document.getElementById('lienzo');
+            canvas = document.getElementById('lienzo1');
             ctx = canvas.getContext('2d');
 
             ctx.beginPath();
@@ -196,8 +208,47 @@
             ctx.fill();
             ctx.strokeStyle = "blue";
             ctx.stroke();
+
+            ctx.font = 'Bold 30px Tahoma';
+            ctx.textAlign = 'center';
+            ctx.fillStyle = 'black';
+            ctx.fillText('SANTI', 230, 50);
+
+
+            var img = new Image();
+            img.src = './assets/images/avengers-logoO.png';
+            img.onload = function () {
+                ctx.drawImage(img, 110, 0);
+            };
+
         }
 
+        function Reproducir(n) {
+
+            debugger;
+            var reproducir = new Audio();
+            reproducir.pause(); //conseguir esto;
+            switch (n) {
+                case 1:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Amaneceramanecer%20en%20el%20campo%20con%20aves34.mp3";
+                    reproducir.play();
+                    break;
+                case 2:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/harryHarry%20Potter%20-%20Another%20Story%20(NuevaQ.Net).mp3";
+                    reproducir.play();
+                    break;
+                case 3:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Vientoviento%20normal.mp3";
+                    reproducir.play();
+                    break;
+                case 4:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/lucesluces.mp3";
+                    reproducir.play();
+                    break;
+
+            }
+
+        }
         function accionPlay() {
             if (!medio.paused && !medio.ended) {
                 medio.pause();
@@ -258,7 +309,10 @@
             }
         }
 
-
+        document.getElementById("btn1").addEventListener("click", function () { Reproducir(1); }, false);
+        document.getElementById("btn2").addEventListener("click", function () { Reproducir(2); }, false);
+        document.getElementById("btn3").addEventListener("click", function () { Reproducir(3); }, false);
+        document.getElementById("btn4").addEventListener("click", function () { Reproducir(4); }, false);
         window.addEventListener('load', iniciar, false);
 
         function CambiaModo() {

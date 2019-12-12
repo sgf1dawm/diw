@@ -49,6 +49,12 @@ article h4{
     padding-bottom: 10px;
     text-transform: uppercase;
 }
+#videoConverted{
+    position: relative;
+    width: calc(100% + 2px);
+    height: calc(100%);
+    
+}
 #medio{
     position: relative;
     width: calc(100% + 2px);
@@ -57,7 +63,8 @@ article h4{
 }
 
 #audiosConverted{
-    margin: 0 auto;
+    margin-left: 10%;
+    margin-top: 50px;
     width: 80%;
 }
 #articleVideo{
