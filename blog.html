@@ -110,17 +110,15 @@
             <button id="btn4">Iniciar sonido 4</button>
         </article>
         <article>
-            <canvas id="lienzo1" width="450" height="300">
+            <canvas id="lienzo" width="450" height="300">
                 El navegador no soporta arte
             </canvas>
         </article>
         <article>
-            <canvas id="lienzo2" width="450" height="300">
-                El navegador no soporta un juegazo
+            <canvas id="lienso">
+                El navegador no soporta ese juegazo
             </canvas>
         </article>
-
-
     </section>
     <aside>
         <h2>Páginas Interesantes</h2>
@@ -155,6 +153,15 @@
     </footer>
     <!-- pausar sonido y juego -->
     <script>
+        var lienso = null, kanvas = null;
+        var x = 50, y = 50;
+        var pause = true;
+        var lastPress = null; //Variable para guardar la tecla presionada
+        //En nuestro juego, usaremos las teclas izquierda, arriba, derecha y abajo, cuyos valores numéricos son 37, 38, 39 y 40 respectivamente.
+        const KEY_LEFT = 37;
+        const KEY_UP = 38;
+        const KEY_RIGHT = 39;
+        const KEY_DOWN = 40;
         function iniciar() {
 
             medio = document.getElementById('medio');
@@ -174,7 +181,7 @@
 
             var boton = document.getElementById('boton');
 
-            canvas = document.getElementById('lienzo1');
+            canvas = document.getElementById('lienzo');
             ctx = canvas.getContext('2d');
 
             ctx.beginPath();
@@ -221,7 +228,66 @@
                 ctx.drawImage(img, 110, 0);
             };
 
+            kanvas = document.getElementById('lienso');
+            lienso = kanvas.getContext('2d'); //obtenemos el contexto de dibujo
+            run();
+
         }
+
+        function run() {
+            //requestAnimationFrame(): informa al navegador de que quieres realizar una animación y solicita que el navegador programe el repintado de la ventana para el próximo ciclo de animación.
+            requestAnimationFrame(run); //animación optimizada
+            accionesJuego();
+            pintarLienzo(lienso);
+        }
+
+        function accionesJuego() {
+            //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
+            switch (lastPress) {
+                case KEY_RIGHT:
+                    x += 5;
+                    break;
+                case KEY_LEFT:
+                    x -= 5;
+                    break;
+                case KEY_UP:
+                    y -= 5;
+                    break;
+                case KEY_DOWN:
+                    y += 5;
+                    break;
+
+            }
+
+            //verificaremos si el player ha salido del canvas, en cuyo caso, haremos que aparezca por el otro lado:
+            if (x >= kanvas.width) {
+                x = 0;
+            }
+            if (x < 0) {
+                x = kanvas.width;
+            }
+            if (y >= kanvas.height) {
+                debugger;
+                y = 0;
+            }
+            if (y < 0) {
+                y = kanvas.height;
+            }
+
+
+        }
+
+        function pintarLienzo(lienso) {
+            lienso.fillStyle = "#BCD8C1"; //le ponemos un color al lienzo
+            lienso.fillRect(0, 0, kanvas.width, kanvas.height); //Dibujamos el lienzo
+            lienso.fillStyle = '#0f0';
+            lienso.fillRect(x, y, 10, 10); //Dibujamos el jugador: va por posición x,y y es de 10x10       
+        }
+
+        document.addEventListener('keydown', function (evt) {
+            //Creamos un manejador de evento para el teclado que se encargue de almacenar la tecla presionada. El evento que nos interesa en este caso es keydown
+            lastPress = evt.keyCode;
+        }, false);
 
         function Reproducir(n) {
 
