@@ -27,8 +27,9 @@ article, aside, #video{
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0) !important;
     padding: 5%;
-    margin-left: 20%;
+    margin-left: 15%;
 }
+
 
 .btnAmbiente{
     border-radius: 10px;
@@ -38,6 +39,11 @@ article, aside, #video{
     margin: 10px;
     width: 33%;
     box-sizing: border-box;
+}
+
+.btnAmbiente:last-child{
+    width: 40%;
+    margin-left: 18%;
 }
 
 

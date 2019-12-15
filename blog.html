@@ -76,9 +76,9 @@
         <!-- </article> -->
         <article>
             <video id="videoConverted" controls>
-                <source src="./assets/video/Tunnel - 26475-converted.ogg" type="video/ogg">
-                <source src="./assets/video/Tunnel - 26475-converted.mp4" type="video/mp4">
-                <source src="./assets/video/Tunnel - 26475-converted.webm" type="video/webm">
+                <source src="./assets/video/Tunnel.ogg" type="video/ogg">
+                <source src="./assets/video/Tunnel.mp4" type="video/mp4">
+                <source src="./assets/video/Tunnel.webm" type="video/webm">
             </video>
         </article>
         <article>
@@ -97,8 +97,8 @@
         <article>
             <h4>Sonidos</h4>
             <audio id="audiosConverted" preload controls loop>
-                <source src="./assets/sonidos/Tecno rithmtechno.mp3" type="audio/mpeg">
-                <source src="./assets/sonidos/Tecno rithmtechno.ogg" type="audio/ogg">
+                <source src="./assets/sonidos/Tecno.mp3" type="audio/mpeg">
+                <source src="./assets/sonidos/Tecno.ogg" type="audio/ogg">
 
             </audio>
         </article>
@@ -109,6 +109,7 @@
                 <button id="btn2" class="btnAmbiente">Iniciar sonido 2</button>
                 <button id="btn3" class="btnAmbiente">Iniciar sonido 3</button>
                 <button id="btn4" class="btnAmbiente">Iniciar sonido 4</button>
+                <button id="pausa" class="btnAmbiente">Pausa</button>
             </div>
         </article>
         <article>
@@ -165,6 +166,7 @@
         const KEY_RIGHT = 39;
         const KEY_DOWN = 40;
         const KEY_P = 80;
+        debugger;
         function iniciar() {
 
             medio = document.getElementById('medio');
@@ -246,6 +248,7 @@
 
         function accionesJuego() {
             if (!pause) {
+
                 //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
                 switch (lastPress) {
                     case KEY_RIGHT:
@@ -279,132 +282,134 @@
                 }
 
             }
-
             if (lastPress == KEY_P) {
                 pause = !pause;
                 lastPress = null;
             }
+        }
 
+
+
+        function pintarLienzo(lienso) {
+
+            lienso.fillStyle = "#BCD8C1"; //le ponemos un color al lienzo
+            lienso.fillRect(0, 0, kanvas.width, kanvas.height); //Dibujamos el lienzo
+            lienso.fillStyle = '#0f0';
+            lienso.fillRect(x, y, 10, 10); //Dibujamos el jugador: va por posición x,y y es de 10x10      
             if (pause) {
                 lienso.textAlign = 'center';
+                lienso.fillStyle = '#111';
                 lienso.fillText('PAUSE', 150, 75);
                 lienso.textAlign = 'left';
+            }
+        }
 
+        document.addEventListener('keydown', function (evt) {
+            //Creamos un manejador de evento para el teclado que se encargue de almacenar la tecla presionada. El evento que nos interesa en este caso es keydown
+            lastPress = evt.keyCode;
+        }, false);
 
+        var reproducir = new Audio();
+        function Reproducir(n) {
 
+            debugger;
+            switch (n) {
+                case 1:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Amaneceramanecer%20en%20el%20campo%20con%20aves34.mp3";
+                    reproducir.play();
+                    break;
+                case 2:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/harryHarry%20Potter%20-%20Another%20Story%20(NuevaQ.Net).mp3";
+                    reproducir.play();
+                    break;
+                case 3:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Vientoviento%20normal.mp3";
+                    reproducir.play();
+                    break;
+                case 4:
+                    reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/lucesluces.mp3";
+                    reproducir.play();
+                    break;
+                case 5:
+                    reproducir.pause();
+                    break;
 
             }
 
-            function pintarLienzo(lienso) {
-                lienso.fillStyle = "#BCD8C1"; //le ponemos un color al lienzo
-                lienso.fillRect(0, 0, kanvas.width, kanvas.height); //Dibujamos el lienzo
-                lienso.fillStyle = '#0f0';
-                lienso.fillRect(x, y, 10, 10); //Dibujamos el jugador: va por posición x,y y es de 10x10       
-            }
-
-            document.addEventListener('keydown', function (evt) {
-                //Creamos un manejador de evento para el teclado que se encargue de almacenar la tecla presionada. El evento que nos interesa en este caso es keydown
-                lastPress = evt.keyCode;
-            }, false);
-
-            function Reproducir(n) {
-
-                debugger;
-                var reproducir = new Audio();
-                reproducir.pause(); //conseguir esto;
-                switch (n) {
-                    case 1:
-                        reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Amaneceramanecer%20en%20el%20campo%20con%20aves34.mp3";
-                        reproducir.play();
-                        break;
-                    case 2:
-                        reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/harryHarry%20Potter%20-%20Another%20Story%20(NuevaQ.Net).mp3";
-                        reproducir.play();
-                        break;
-                    case 3:
-                        reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Vientoviento%20normal.mp3";
-                        reproducir.play();
-                        break;
-                    case 4:
-                        reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/lucesluces.mp3";
-                        reproducir.play();
-                        break;
-
-                }
+        }
+        function accionPlay() {
+            if (!medio.paused && !medio.ended) {
+                medio.pause();
+                play.value = '\u25BA'; //\u25BA
 
             }
-            function accionPlay() {
-                if (!medio.paused && !medio.ended) {
-                    medio.pause();
-                    play.value = '\u25BA'; //\u25BA
-
-                }
-                else {
-                    medio.play();
-                    play.value = '||';
-
-                }
-            }
-            function accionReiniciar() {
-                //Usar propiedad .currentTime
-                //Reproducir el vídeo
-                //Cambiar el valor del botón a ||
-                if (medio.currentTime > 0) {
-                    medio.currentTime = 0;
-                    medio.play();
-                    play.value = '||';
-                }
+            else {
+                medio.play();
+                play.value = '||';
 
             }
-            function accionRetrasar() {
-                //Usar propiedad .curentTime
-                //Contemplar que no existen valores negativos
-                if (medio.currentTime > 3) {
-                    medio.currentTime -= 3;
-                }
-                else {
-                    medio.currentTime = 0;
-                }
-
-            }
-            function accionAdelantar() {
-                //Contemplar que no existen valores mayores a medio.duration	
-                if (medio.currentTime <= (medio.duration - 3)) {
-                    medio.currentTime += 3;
-                }
-                else {
-                    medio.currentTime = medio.duration;
-                }
-            }
-            function accionSilenciar() {
-                //Utilizar medio.muted = true; o medio.muted = false;
-                !medio.muted ? medio.muted = true : medio.muted = false;
-            }
-            function accionMasVolumen() {
-                //Contemplar que el valor máximo de volumen es 1
-                if (medio.volume <= 0.8) {
-                    medio.volume += 0.2;
-                }
-            }
-            function accionMenosVolumen() {
-                //Contemplar que el valor mínimo de volumen es 0
-                if (medio.volume >= 0.2) {
-                    medio.volume -= 0.2;
-                }
+        }
+        function accionReiniciar() {
+            //Usar propiedad .currentTime
+            //Reproducir el vídeo
+            //Cambiar el valor del botón a ||
+            if (medio.currentTime > 0) {
+                medio.currentTime = 0;
+                medio.play();
+                play.value = '||';
             }
 
-            document.getElementById("btn1").addEventListener("click", function () { Reproducir(1); }, false);
-            document.getElementById("btn2").addEventListener("click", function () { Reproducir(2); }, false);
-            document.getElementById("btn3").addEventListener("click", function () { Reproducir(3); }, false);
-            document.getElementById("btn4").addEventListener("click", function () { Reproducir(4); }, false);
-            window.addEventListener('load', iniciar, false);
-
-            function CambiaModo() {
-                var body = document.getElementById("body");
-                var ModoActual = body.className;
-                body.className = ModoActual == "diurno" ? modo.value = "Cambia al modo dia" : modo.value = "Cambia al modo noche";
-                body.className = ModoActual == "diurno" ? "nocturno" : "diurno";
+        }
+        function accionRetrasar() {
+            //Usar propiedad .curentTime
+            //Contemplar que no existen valores negativos
+            if (medio.currentTime > 3) {
+                medio.currentTime -= 3;
             }
+            else {
+                medio.currentTime = 0;
+            }
+
+        }
+        function accionAdelantar() {
+            //Contemplar que no existen valores mayores a medio.duration	
+            if (medio.currentTime <= (medio.duration - 3)) {
+                medio.currentTime += 3;
+            }
+            else {
+                medio.currentTime = medio.duration;
+            }
+        }
+        function accionSilenciar() {
+            //Utilizar medio.muted = true; o medio.muted = false;
+            !medio.muted ? medio.muted = true : medio.muted = false;
+        }
+        function accionMasVolumen() {
+            //Contemplar que el valor máximo de volumen es 1
+            if (medio.volume <= 0.8) {
+                medio.volume += 0.2;
+            }
+        }
+        function accionMenosVolumen() {
+            //Contemplar que el valor mínimo de volumen es 0
+            if (medio.volume >= 0.2) {
+                medio.volume -= 0.2;
+            }
+        }
+
+        document.getElementById("btn1").addEventListener("click", function () { Reproducir(1); }, false);
+        document.getElementById("btn2").addEventListener("click", function () { Reproducir(2); }, false);
+        document.getElementById("btn3").addEventListener("click", function () { Reproducir(3); }, false);
+        document.getElementById("btn4").addEventListener("click", function () { Reproducir(4); }, false);
+        document.getElementById("pausa").addEventListener("click", function () { Reproducir(5); }, false);
+        window.addEventListener('load', iniciar, false);
+
+        function CambiaModo() {
+            var body = document.getElementById("body");
+            var ModoActual = body.className;
+            body.className = ModoActual == "diurno" ? modo.value = "Cambia al modo dia" : modo.value = "Cambia al modo noche";
+            body.className = ModoActual == "diurno" ? "nocturno" : "diurno";
+        }
     </script>
 </body>
 
