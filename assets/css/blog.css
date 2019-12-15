@@ -77,7 +77,7 @@ article h4{
 #videoConverted{
     position: relative;
     width: calc(100% + 2px);
-    height: calc(100%);
+    height: calc(90%);
     
 }
 #medio{
