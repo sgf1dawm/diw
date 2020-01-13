@@ -75,13 +75,23 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <!-- </article> -->
         <article>
+            <h4>Videos Comprimidos</h4>
             <video id="videoConverted" controls>
-                <source src="./assets/video/Tunnel - 26475-converted.ogg" type="video/ogg">
-                <source src="./assets/video/Tunnel - 26475-converted.mp4" type="video/mp4">
-                <source src="./assets/video/Tunnel - 26475-converted.webm" type="video/webm">
+                <source src="./assets/video/Tunnel.ogg" type="video/ogg">
+                <source src="./assets/video/Tunnel.mp4" type="video/mp4">
+                <source src="./assets/video/Tunnel.webm" type="video/webm">
             </video>
         </article>
         <article>
+            <h4>Sonidos Comprimidos</h4>
+            <audio id="audiosConverted" preload controls loop>
+                <source src="./assets/sonidos/Tecno.mp3" type="audio/mpeg">
+                <source src="./assets/sonidos/Tecno.ogg" type="audio/ogg">
+
+            </audio>
+        </article>
+        <article>
+            <h4>Control de Video</h4>
             <video id="medio" src="./assets/video/big_buck_bunny.mp4"></video>
             <nav class="controles">
                 <input type="button" id="reiniciar" value="reiniciar">
@@ -95,19 +105,14 @@
             </nav>
         </article>
         <article>
-            <h4>Sonidos</h4>
-            <audio id="audiosConverted" preload controls loop>
-                <source src="./assets/sonidos/Tecno rithmtechno.mp3" type="audio/mpeg">
-                <source src="./assets/sonidos/Tecno rithmtechno.ogg" type="audio/ogg">
-
-            </audio>
-        </article>
-        <article>
             <h4>Control de Audio</h4>
-            <button id="btn1">Iniciar sonido 1</button>
-            <button id="btn2">Iniciar sonido 2</button>
-            <button id="btn3">Iniciar sonido 3</button>
-            <button id="btn4">Iniciar sonido 4</button>
+            <div id="ctrAudio">
+                <button id="btn1" class="btnAmbiente">Iniciar sonido 1</button>
+                <button id="btn2" class="btnAmbiente">Iniciar sonido 2</button>
+                <button id="btn3" class="btnAmbiente">Iniciar sonido 3</button>
+                <button id="btn4" class="btnAmbiente">Iniciar sonido 4</button>
+                <button id="pausa" class="btnAmbiente">Pausa</button>
+            </div>
         </article>
         <article>
             <canvas id="lienzo" width="450" height="300">
@@ -162,6 +167,8 @@
         const KEY_UP = 38;
         const KEY_RIGHT = 39;
         const KEY_DOWN = 40;
+        const KEY_P = 80;
+        debugger;
         function iniciar() {
 
             medio = document.getElementById('medio');
@@ -242,46 +249,61 @@
         }
 
         function accionesJuego() {
-            //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
-            switch (lastPress) {
-                case KEY_RIGHT:
-                    x += 5;
-                    break;
-                case KEY_LEFT:
-                    x -= 5;
-                    break;
-                case KEY_UP:
-                    y -= 5;
-                    break;
-                case KEY_DOWN:
-                    y += 5;
-                    break;
+            if (!pause) {
+
+                //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
+                switch (lastPress) {
+                    case KEY_RIGHT:
+                        x += 5;
+                        break;
+                    case KEY_LEFT:
+                        x -= 5;
+                        break;
+                    case KEY_UP:
+                        y -= 5;
+                        break;
+                    case KEY_DOWN:
+                        y += 5;
+                        break;
+
+                }
+
+                //verificaremos si el player ha salido del canvas, en cuyo caso, haremos que aparezca por el otro lado:
+                if (x >= kanvas.width) {
+                    x = 0;
+                }
+                if (x < 0) {
+                    x = kanvas.width;
+                }
+                if (y >= kanvas.height) {
+                    debugger;
+                    y = 0;
+                }
+                if (y < 0) {
+                    y = kanvas.height;
+                }
 
             }
-
-            //verificaremos si el player ha salido del canvas, en cuyo caso, haremos que aparezca por el otro lado:
-            if (x >= kanvas.width) {
-                x = 0;
+            if (lastPress == KEY_P) {
+                pause = !pause;
+                lastPress = null;
             }
-            if (x < 0) {
-                x = kanvas.width;
-            }
-            if (y >= kanvas.height) {
-                debugger;
-                y = 0;
-            }
-            if (y < 0) {
-                y = kanvas.height;
-            }
-
-
         }
 
+
+
         function pintarLienzo(lienso) {
+
             lienso.fillStyle = "#BCD8C1"; //le ponemos un color al lienzo
             lienso.fillRect(0, 0, kanvas.width, kanvas.height); //Dibujamos el lienzo
             lienso.fillStyle = '#0f0';
-            lienso.fillRect(x, y, 10, 10); //Dibujamos el jugador: va por posición x,y y es de 10x10       
+            lienso.fillRect(x, y, 10, 10); //Dibujamos el jugador: va por posición x,y y es de 10x10      
+            if (pause) {
+                lienso.textAlign = 'center';
+                lienso.fillStyle = '#111';
+                lienso.fillText('PAUSE', 150, 75);
+                lienso.textAlign = 'left';
+            }
         }
 
         document.addEventListener('keydown', function (evt) {
@@ -289,11 +311,10 @@
             lastPress = evt.keyCode;
         }, false);
 
+        var reproducir = new Audio();
         function Reproducir(n) {
 
             debugger;
-            var reproducir = new Audio();
-            reproducir.pause(); //conseguir esto;
             switch (n) {
                 case 1:
                     reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/Amaneceramanecer%20en%20el%20campo%20con%20aves34.mp3";
@@ -310,6 +331,9 @@
                 case 4:
                     reproducir.src = "https://www.sshhtt.com/images/sampledata/ambient/lucesluces.mp3";
                     reproducir.play();
+                    break;
+                case 5:
+                    reproducir.pause();
                     break;
 
             }
@@ -379,6 +403,7 @@
         document.getElementById("btn2").addEventListener("click", function () { Reproducir(2); }, false);
         document.getElementById("btn3").addEventListener("click", function () { Reproducir(3); }, false);
         document.getElementById("btn4").addEventListener("click", function () { Reproducir(4); }, false);
+        document.getElementById("pausa").addEventListener("click", function () { Reproducir(5); }, false);
         window.addEventListener('load', iniciar, false);
 
         function CambiaModo() {
