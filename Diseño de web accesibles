@@ -1,0 +1,55 @@
+Actividad 1.1
+	
+Indica qué tipo de perfil no podría entender las siguientes instrucciones:
+	
+	Pulsa el botón amarillo para acceder: Una persona daltónica o ciega
+
+	El menú está en la derecha: Una persona ciega o disléxica
+
+	Los errores se indicarán mediante un sonido: Una persona sorda
+
+
+Actividad 1.2
+
+Propón una solución a cada uno de los siguientes desafíos:
+
+	Usuarios que no pueden ver vídeos: Utilizar un medio que describa los videos mediante palabras y asi ser leídos por programas externos.
+
+	Usuarios que no pueden escuchar vídeos: Utilizar subtitulos que indiquen que es lo que está pasando.
+
+	Los daltónicos no pueden representar bien los colores: Utilizar un mejor contraste de colores.
+
+	Usuarios que no pueden utilizar el ratón: Tener una web accesible mediante tabulador.
+
+	Usuarios con dificultades de concentración o comprensión cuando hay párrafos largos: Mantener un límite de extensión para parrafos.
+
+Actividad 1.3
+
+Instala la extensión ChromeVox Classic Extension. 
+Realiza una puesta en común sobre las opciones de ChromeVox que figuran en el apartado “configuración”.
+
+	¿Para trabajar con ChromeVox es preciso disponer de altavoces? Si, es necesario para poder escuchar el lector de webs.
+
+	¿Un usuario ciego puede instalar ChromeVox? No, es necesario de la ayuda de un informatico  para poder instalar la extensión.
+
+	¿Permite cambio de idioma? Si, en la configuración de la extensión te permite seleccionar la voz que desees.
+
+	¿Permite cambio de voz? Al igual que la pregunta anterior, puedes seleccionar la voz y el idiomma.
+
+	¿Se pueden modificar los comandos para desplazarte por una página cómodamente? Si, permite personalizar la combinaciones de teclas para comandos frecuentemente utilizados.
+
+
+Actividad 1.4
+
+Utiliza ChromeVox para leer la página inicial de Eniun y saca tus propias conclusiones en cuanto al uso de la herramienta. Exponlas en común en clase.
+
+	¿La herramienta se dedica a leer el contenido o también lo “explica”? Explica el tipo de elemento y a que conjuntos de elementos pertenece.
+
+	Cuando utilizas el tabulado para acceder a los enlaces ¿has entendido bien dónde te lleva cada enlace? ¿Qué cambiarías? Salvo los enlaces a los que se refiere como "enlace interno", en general si se entiende ya que dicta el texto del enlace.
+
+	¿Qué pasa cuando lees un enlace de una imágen que se ha incluido mediante CSS (por ejemplo: los enlaces de redes sociales en los que se utiliza un repositorio que agrega las imágenes mediante CSS)? ¿Qué ocurriría si no se incluyera la etiqueta “title”? 
+	Mediante la etiqueta title lee el titulo que se le ha puesto a la imagen y se entiende perfectamente a donde te redirige. Si no se incluyese la etiquete title, no se diferenciaría uno de otros.
+
+	Accede a servicios/desarrollo web y pulsa en la tabla de precios. ¿se entiende? ¿qué podemos hacer para mejorarla? No, en el enlace que redirige para crear un presupuesto, debería indicar a que tipo de plan se refiere.
+
+	¿Es entendible el botón de la lupa? ¿qué haríamos para que sea entendible? No, se refiere a el como enlace interno. Mediante la etiqueta title podemos darle un nombre que haga referencia al icono. 
