@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html lang="es">
 
 <head>
     <script src="https://kit.fontawesome.com/509deda241.js" crossorigin="anonymous"></script>
@@ -35,21 +35,22 @@
     <meta name="twitter:site" content="@OttoSport">
     <meta name="twitter:image" content="assets/images/ottologobg.png">
     <meta name="twitter:creator" content="@OttoSport">
-      <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-157054856-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-157054856-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-157054856-1');
-</script>
+        gtag('config', 'UA-157054856-1');
+    </script>
 </head>
 
 <body id="body" class="diurno">
     <header>
         <nav>
-            <a href="index.html"><img src="./assets/images/avengers-logoO.png" width="200" height="67" alt="logo"></a>
+            <a href="index.html"><img src="./assets/images/avengers-logoO.png" width="200" height="67"
+                    alt="logotipo de la empresa"></a>
             <ul>
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./blog.html">Blog</a></li>
@@ -66,23 +67,23 @@
             <p>Tlf: <a href="tel:+34625331725">+34 625 331 735</a></p>
 
         </div>
-        <label>Nombre</label>
+        <label for="Nombre">Nombre</label>
         <input name="Nombre" type="text" placeholder="Nombre" required><br>
 
-        <label>Email</label>
+        <label for="Email">Email</label>
         <input name="Email" type="text" placeholder="Email" required><br>
 
-        <label>Edad</label>
+        <label for="Edad">Edad</label>
         <input name="Edad" type="text" placeholder="Edad" required><br><br>
 
-        <label>Telefono</label>
+        <label for="Telefono">Telefono</label>
         <input name="Telefono" type="text" placeholder="Telefono" required><br>
 
-        <label>Consulta</label>
-        <textarea placeholder="Escribe tu mensaje..." required></textarea><br>
+        <label for="Comentario">Consulta</label for="Comentario">
+        <textarea id="Comentario" placeholder="Escribe tu mensaje..." required></textarea><br>
 
-        <label>Acepto los términos y condiciones</label>
-        <input type="checkbox" required><br>
+        <label for="Terminos">Acepto los términos y condiciones</label>
+        <input id="Terminos" type="checkbox" required><br>
 
         <input type="button" onclick="" value="Enviar">
     </form>
@@ -96,10 +97,12 @@
     </div>
 
     <footer>
-        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"><i
-                class="fab fa-facebook-f animacionRRSS"></i></a>
-        <a href="https://www.twitter.com/Otto_Sport"><i class="fab fa-twitter animacionRRSS"></i></a>
-        <a href="https://www.pinterest.com/Otto_Sport/"><i class="fab fa-pinterest-p animacionRRSS"></i></a>
+        <a href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"><i class="fab fa-facebook-f animacionRRSS"
+                href="https://www.facebook.com/Taller-OttoSport-1411109992493324/"></i></a>
+        <a href="https://www.twitter.com/Otto_Sport"><i href="https://www.twitter.com/Otto_Sport"
+                class="fab fa-twitter animacionRRSS"></i></a>
+        <a href="https://www.pinterest.com/Otto_Sport/"><i href="https://www.pinterest.com/Otto_Sport/"
+                class="fab fa-pinterest-p animacionRRSS"></i></a>
         <a href="tel:625331735"><i class="fab fa-whatsapp"></i></a>
         <div id="privacidad">
             <small>© Otto Sport 2019</small>
@@ -107,7 +110,8 @@
 
             <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img class="animacionLogo"
                     alt="Licencia de Creative Commons" style="border-width:0"
-                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />Este obra está
+                    src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png"
+                    href="http://creativecommons.org/licenses/by-nc-nd/4.0/" /></a><br />Este obra está
             bajo
             una <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">licencia de Creative Commons
                 Reconocimiento-NoComercial-SinObraDerivada 4.0 Internacional</a>.
