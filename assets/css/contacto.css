@@ -26,7 +26,7 @@ body.diurno form, body.diurno #mapa{
 }
 
 #datos a{
-    color: #ff6e6e;
+    color: #000000;
     -webkit-transition: color 1s ease;
     transition: color 1s ease;
 }
